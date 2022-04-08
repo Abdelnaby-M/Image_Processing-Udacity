@@ -11,8 +11,8 @@ interface ImageQuery {
 
 export default class File {
   // Default paths
-  static imagesFullPath = path.resolve(__dirname, '../assets/images/full');
-  static imagesThumbPath = path.resolve(__dirname, '../assets/images/thumb');
+  static imagesFullPath = path.resolve(__dirname, '../../assets/images/full');
+  static imagesThumbPath = path.resolve(__dirname, '../../assets/images/thumb');
 
   /**
    * Determine image path.
