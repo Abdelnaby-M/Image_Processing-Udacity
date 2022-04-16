@@ -5,8 +5,10 @@ import { validate } from '../services/validate';
 const images: express.Router = express.Router();
 
 images.get('/',
-  async (request: express.Request, 
-    response: express.Response): Promise<void> => {
+  async (
+    request: express.Request,
+    response: express.Response
+  ): Promise<void> => {
     // Check whether request can be worked with
     const validationMessage: null | string = await validate(request.query);
     if (validationMessage) {

@@ -123,7 +123,7 @@ export default class File {
     if (!params.filename || !params.width || !params.height) {
       return null; // Nothing to do
     }
-
+    this.createThumbPath();
     const filePathFull: string = path.resolve(
       File.imagesFullPath,
       `${params.filename}.jpg`
