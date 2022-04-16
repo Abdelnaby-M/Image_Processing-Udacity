@@ -22,17 +22,13 @@ describe('Test image processing via sharp', (): void => {
   });
 
   it('succeeds to write resized thumb file (existing file, valid size values)', async (): Promise<void> => {
-    let errorFile: null | string = '';
-    try{
     await File.createThumb({ filename: 'fjord', width: '99', height: '99' });
-    } catch{
-      errorFile = 'could not creat thumb';
-    }
+
     const resizedImagePath: string = path.resolve(
       File.imagesThumbPath,
       `fjord-99x99.jpg`
     );
-    
+    let errorFile: null | string = '';
 
     try {
       await fs.access(resizedImagePath);
